@@ -2,7 +2,7 @@
 
 ## Reproduce
 
-On the password recovery page "http://{IP}/?page=recover" we found only a button to submit the mail so we inspected the HTML page and we found a hidden input that contain an email 'webmaster@borntosec.com' as value, its normaly the admin mail that receive the password reset requests.
+On the password recovery page "http://{IP}/?page=recover#" we found only a button to submit the mail so we inspected the HTML page and we found a hidden input that contain an email 'webmaster@borntosec.com' as value, its normaly the admin mail that receive the password reset requests.
 
 By just changing the value of this input and submiting the form, we got the flag.
 
