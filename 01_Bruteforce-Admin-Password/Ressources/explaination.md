@@ -13,6 +13,6 @@ Use of weak password + use of a GET request for authentication
 ## Fix 
 
 - Use strong passwords
-- Ban the IP after several number of tries
+- Block the IP after several number of requests
 - Don't use GET requests in authentication
 - Make the user solve a captcha to avoid the use of bruteforce script
