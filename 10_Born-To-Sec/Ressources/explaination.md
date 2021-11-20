@@ -20,7 +20,7 @@ Let's use this browser : "ft_bornToSec". It will help you a lot.
 
 So we sent a request with this specific user agent and referer:
 
-`curl 'http://{IP}/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c' -H 'Referer: https://www.nsa.gov/'  -H 'User-Agent: ft_bornToSec' | grep 'flag'`
+`curl 'http://{IP}/?page=e43ad1fdc54babe674da7c7b8f0127bde61de3fbe01def7d00f151c2fcca6d1c' -e 'https://www.nsa.gov/' -A 'ft_bornToSec' | grep 'flag'`
 
 
 
