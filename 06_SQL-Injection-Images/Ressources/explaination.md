@@ -4,8 +4,6 @@
 
 We found an SQL Injection in: `http://{IP}/?page=searchimg`
 
-SQL injection: is a code injection technique that might destroy your database.
-
 - Get the database name: `1 AND 0=1 UNION SELECT 1, database()` 
 ===> `Member_images`
 
@@ -36,9 +34,12 @@ And that what we did :)
 
 ## Explaination of the vurnability
 
-The developer tried to solve some sort of authentication by using cookies, by manipulating the values you can have access to some privileges, In general never put sensitive data in cookies.
+SQL injection: is a code injection technique that might destroy your database.
 
 
 ## Fix 
 
-- Use JWT (Json Web Token) for authentication
+- Use of Prepared Statements (with Parameterized Queries) for example in :
+    - JAVA EE use: PreparedStatement() with bind variables.
+    - PHP use: PDO (PHP Data Object) with strongly typed parameterized queries.
+- Don't construct queries with user input whitout verifications.
