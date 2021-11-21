@@ -32,7 +32,7 @@ def     get_dir_contents(url):
 
 
 
-url = 'http://192.168.1.19/.hidden/'
+url = 'http://192.168.1.12/.hidden/'
 get_dir_contents(url)
 
 # Write the results

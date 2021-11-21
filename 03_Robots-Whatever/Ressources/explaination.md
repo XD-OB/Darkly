@@ -9,19 +9,19 @@ We used the command:
 
 `python3 dirsearch.py -u {IP}`
 
-==> We found this paths:
+==> We found these paths:
+
 - `http://{IP}/robots.txt`
 - `http://{IP}/admin`
 
-Inside `robots.txt` we found some rules that forbide the rebots from indexing or visiting the folders:
+Inside `robots.txt` we found some rules that forbide the robots from indexing or visiting the following routes:
+
 - `/whatever`
 - `/.hidden`
 
 Inside `whatever` we found a file: `htpasswd` that contain this line
 
-``
-root:8621ffdbc5698829397d97767ac13db3
-``
+`root:8621ffdbc5698829397d97767ac13db3`
 
 Its seem that is the password hashed for the root user.
 
@@ -31,15 +31,13 @@ We used this credentials in the `http://{IP}/admin` section, and tadaaa we got t
 
 ## Infos
 
-robots.txt, it is a convention which allows to tell bots and crawlers which do page indexing: 'not to "index" certain routes' that we prefer not to see to be displayed on the site 
-
+robots.txt, it is a convention which allows to tell bots and crawlers which do page indexing: 'not to "index" certain routes' that we prefer not to see to be displayed on the site
 
 ## Explaination of the vulnerability
 
 The `htpasswd` that contain a very sensitive data (root password) can be viewed publicly
 
-
-## Fix 
+## Fix
 
 - Use `htaccess` to protect the folder
 - Avoid to store passwords like that
